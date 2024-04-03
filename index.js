@@ -3,6 +3,8 @@ const app = express()
 const port = 3000
 const jsonData = require('./pokemon.json')
 const cors = require('cors');
+require('dotenv').config();
+const { query } = require('./services/db.js');
 
 app.use(express.json());
 app.use(cors());
